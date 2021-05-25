@@ -1,0 +1,22 @@
+# random library
+import random
+
+# generate random integer (0, 100)
+rand_int = random.randint(0, 100)
+
+# guessing 
+def guess():
+    u_guess = int(input("Guess number between 0-100: "))
+
+    if u_guess == rand_int:
+        print("You won!")
+
+    if u_guess > rand_int:
+        print("Lower!")
+        guess()
+
+    if u_guess < rand_int:
+        print("Higher!")
+        guess()
+
+guess()
